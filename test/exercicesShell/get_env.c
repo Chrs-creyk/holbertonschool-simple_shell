@@ -1,8 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "shell.h"
 
-char *get_env_var(const char *name)
+char *_getenv(const char *name);
 {
 	extern char **environ;
 	char **var;
@@ -22,7 +20,7 @@ char *get_env_var(const char *name)
 
 int main(int argc, char **argv)
 {
-	char *var = get_env_var("MY_VAR");
+	char *var = _getenv("MY_VAR");
 	if (var)
 	{
 		printf("MY_VAR is set to: %s\n", var);
