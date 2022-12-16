@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <string.h>
 #include <stdio.h>
@@ -16,6 +16,5 @@ extern char **environ;
 char *_getenv(const char *name);
 int _strcmp(const char *s1, const char *s2);
 char *_strcpy(char *dest, char *src);
-
 
 #endif
