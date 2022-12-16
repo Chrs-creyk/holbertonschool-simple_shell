@@ -8,6 +8,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+extern char **environ;
+
 int main(void);
 int main(__attribute__((unused))int ac, char **av);
 
