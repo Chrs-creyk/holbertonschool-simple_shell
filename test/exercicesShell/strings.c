@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "shell.h"
 
 int _strlen(char *s)
