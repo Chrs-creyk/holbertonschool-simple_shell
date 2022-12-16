@@ -1,3 +1,5 @@
+#include "shell.h"
+
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
