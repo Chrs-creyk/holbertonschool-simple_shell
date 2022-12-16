@@ -10,8 +10,9 @@
 
 extern char **environ;
 
-int main(void);
-int main(__attribute__((unused)) int ac, char **av);
+
 char *_getenv(const char *name);
+int main(void);
+int _av(int ac, char **av);
 
 #endif

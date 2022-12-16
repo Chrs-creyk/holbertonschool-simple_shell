@@ -6,7 +6,7 @@
  * @av: array of strings (arguments)
  */
 
-int main(__attribute__((unused)) int ac, char **av)
+int _av(int ac __attribute__((unused)), char **av)
 {
 	int i;
 
