@@ -1,3 +1,5 @@
+#include <shell.h>
+
 int main(void)
 {
 	pid_t my_pid;

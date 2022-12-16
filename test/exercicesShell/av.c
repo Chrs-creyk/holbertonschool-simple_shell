@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <shell.h>
 
 /**
  * main - prints all arguments without using ac
