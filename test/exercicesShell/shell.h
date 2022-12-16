@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +11,7 @@
 extern char **environ;
 
 int main(void);
-int main(__attribute__((unused))int ac, char **av);
+int main(__attribute__((unused)) int ac, char **av);
 char *_getenv(const char *name);
 
 #endif

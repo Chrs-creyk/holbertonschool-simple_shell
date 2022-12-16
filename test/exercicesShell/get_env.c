@@ -1,6 +1,6 @@
 #include "shell.h"
 
-char *_getenv(const char *name);
+char *_getenv(const char *name );
 {
 	extern char **environ;
 	char **var;
