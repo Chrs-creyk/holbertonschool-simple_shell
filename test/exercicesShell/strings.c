@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "shell.h"
 
 int _strlen(char *s)
@@ -31,3 +32,23 @@ int _strcmp(char *s1, char *s2)
 		i++;
 	return (*(s1 + i) - *(s2 + i));
 }
+=======
+#include "shell.h"
+
+int _strlen(char *s)
+{
+	int i;
+	int len;
+
+	i = 0;
+	len = 0;
+	if (!s)
+		return (len);
+	while (*(s + i) != '\0')
+	{
+		len += 1;
+		i++;
+	}
+	return (len);
+}
+>>>>>>> d6da912ee3d452a58ae9d44bf42c538713c96ed7

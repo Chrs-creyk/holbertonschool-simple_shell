@@ -8,12 +8,10 @@ int main()
 		int child = fork();
 		if (child == 0)
 		{
-
 			execl("/bin/ls", "/bin/ls", "-l", "/tmp", (char *)NULL);
 		}
 		else
 		{
-
 			waitpid(child, NULL, 0);
 		}
 	}
