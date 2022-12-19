@@ -78,3 +78,17 @@ int _atoi(char *s)
 
 	return (num * sign);
 }
+
+ssize_t _puts(char *str)
+{
+	ssize_t num, len;
+
+	num = _strlen(str);
+	len = write(STDOUT_FILENO, str, num);
+	if (len != num)
+	{
+		perror("Fatal Error");
+		return (-1);
+	}
+	return (len);
+}
