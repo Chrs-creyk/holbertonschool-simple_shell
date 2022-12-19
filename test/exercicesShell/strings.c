@@ -91,4 +91,3 @@ ssize_t _puts(char *str)
 		return (-1);
 	}
 	return (len);
-}
