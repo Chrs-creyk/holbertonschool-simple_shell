@@ -1,37 +1,32 @@
 #include "shell.h"
 
 /**
- * _getenv - get the value of the enviroment variable
- *
- * @name: name of the variable
- *
- * Return: string that is value of variable
+ * _getenv - Extracts an env variable from environ
+ * @name: Variable name
+ * Return: Pointer to variable name, or NULL if variable hasn't be found
  */
-char *_getenv(const char *name __attribute__((unused)))
-{
-	char *tok;
-	int i = 0;
-	char *token;
-	char *envi[100];
 
-	while (environ[i])
+char *_getenv(char *name)
+{
+	char *e;
+	int d, i, envlen;
+
+	for (i = 0; environ[i]; i++)
 	{
-		envi[i] = strdup(environ[i]);
-		i++;
-	}
-	envi[i] = NULL;
-	i = 0;
-	tok = strtok(envi[i], "=");
-	while (strcmp(name, tok) && envi[i])
-	{
-		tok = strtok(NULL, "\0");
-		free(envi[i]);
-		envi[i] = strdup(environ[i]);
-		if (!envi[++i])
+		envlen = strlen(environ[i]);
+		e = malloc(sizeof(*e) * (envlen + 1));
+		if (e == NULL)
 			return (NULL);
-		tok = strtok(envi[i], "=");
+		e = strcpy(e, environ[i]);
+		e = strtok(e, "=");
+		d = strcmp(name, e);
+		if (d == 0)
+		{
+			free(e);
+			return (environ[i]);
+		}
+		else
+			free(e);
 	}
-	tok = strtok(NULL, "\0");
-	token = strdup(tok);
-	return (token);
+	return (NULL);
 }

@@ -10,8 +10,8 @@
 
 extern char **environ;
 
-int main(int argc __attribute__((unused)), char *argv[]);
-char *_getenv(const char *name);
+
+char *_getenv(char *name);
 void freeArr(char *arr[]);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
