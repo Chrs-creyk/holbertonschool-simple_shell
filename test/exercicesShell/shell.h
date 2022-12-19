@@ -10,6 +10,7 @@
 
 extern char **environ;
 
+int main(int argc __attribute__((unused)), char *argv[]);
 char *_getenv(const char *name);
 void freeArr(char *arr[]);
 int _strcmp(char *s1, char *s2);
