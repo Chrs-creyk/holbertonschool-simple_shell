@@ -8,6 +8,17 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+typedef struct variables
+{
+	char **av;
+	char *buffer;
+	char **env;
+	size_t count;
+	char **argv;
+	int status;
+	char **commands;
+} vars_t;
+
 typedef struct builtins
 {
 	char *name;
@@ -24,5 +35,10 @@ int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 int main(void);
 int _av(int ac, char **av);
+void new_exit(vars_t *vars);
+void env(char **env);
+char *_strcat(char *dest, char *src);
+ssize_t _puts(char *str);
+
 
 #endif
