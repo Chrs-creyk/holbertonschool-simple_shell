@@ -27,7 +27,6 @@ typedef struct builtins
 
 extern char **environ;
 
-char *_searchpath(char *com);
 char *_getenv(char *name);
 void freeArr(char *arr[]);
 int _strcmp(char *s1, char *s2);
