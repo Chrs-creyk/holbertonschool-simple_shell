@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * _getenv - get the value of the enviroment variable
  *
