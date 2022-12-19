@@ -10,10 +10,10 @@
 int main(int argc __attribute__((unused)), char *argv[])
 {
 	char *prompt;
-	size_t aux;
+	size_t a;
 
 	prompt = "($)";
-	aux = 1;
-	init_shell(prompt, argv[0], aux);
+	a = 1;
+	init_shell(prompt, argv[0], a);
 	return (0);
 }
