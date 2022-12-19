@@ -33,6 +33,5 @@ char *_getenv(const char *name __attribute__((unused)))
 	}
 	tok = strtok(NULL, "\0");
 	token = strdup(tok);
-	freeArr(envi);
 	return (token);
 }
