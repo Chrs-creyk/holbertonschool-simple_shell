@@ -42,5 +42,6 @@ char *_strcat(char *dest, char *src);
 ssize_t _puts(char *str);
 void new_setenv(vars_t *vars);
 void new_unsetenv(vars_t *vars);
+void (*check_for_builtins(vars_t *vars))(vars_t *vars);
 
 #endif
