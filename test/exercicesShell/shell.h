@@ -8,6 +8,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+typedef struct builtins
+{
+	char *name;
+	void (*f)(vars_t *);
+} builtins_t;
+
 extern char **environ;
 
 char *_searchpath(char *com);
