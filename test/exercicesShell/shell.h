@@ -39,6 +39,7 @@ void new_exit(vars_t *vars);
 void env(char **env);
 char *_strcat(char *dest, char *src);
 ssize_t _puts(char *str);
-
+void new_setenv(vars_t *vars);
+void new_unsetenv(vars_t *vars);
 
 #endif
