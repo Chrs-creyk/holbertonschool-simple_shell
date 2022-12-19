@@ -1,3 +1,5 @@
+#include "shell.h"
+
 void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 {
 	unsigned int i;
