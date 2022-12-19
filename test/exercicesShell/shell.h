@@ -11,6 +11,7 @@
 extern char **environ;
 
 char *_getenv(const char *name);
+void freeArr(char *arr[]);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
