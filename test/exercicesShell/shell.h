@@ -47,5 +47,11 @@ void new_unsetenv(vars_t *vars);
 void (*check_for_builtins(vars_t *vars))(vars_t *vars);
 int path_execute(char *command, vars_t *vars); 
 char *find_path(char **env);
+int check_for_dir(char *str); 
+int execute_cwd(vars_t *vars);
+void check_for_path(vars_t *vars);
+void print_error(vars_t *vars, char *msg);
+void _puts2(char *str); 
+char *_uitoa(unsigned int count); 
 
 #endif
