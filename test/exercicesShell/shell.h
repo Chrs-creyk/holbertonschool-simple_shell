@@ -43,5 +43,6 @@ void new_setenv(vars_t *vars);
 void new_unsetenv(vars_t *vars);
 void (*check_for_builtins(vars_t *vars))(vars_t *vars);
 int path_execute(char *command, vars_t *vars); 
+char *find_path(char **env);
 
 #endif
