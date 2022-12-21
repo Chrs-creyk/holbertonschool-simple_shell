@@ -19,7 +19,10 @@ void new_exit(vars_t *vars)
 		}
 		vars->status = status;
 	}
-	
+	free(vars->buffer);
+	free(vars->av);
+	free(vars->commands);
+	free_env(vars->env);
 	exit(vars->status);
 }
 
