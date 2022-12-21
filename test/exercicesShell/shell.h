@@ -45,7 +45,6 @@ int _wait(void);
 int _av(int ac, char **av);
 void new_exit(vars_t *vars);
 void _env(vars_t *vars);
-static void sig_handler(int uuv);
 char *_strcat(char *dest, char *src);
 ssize_t _puts(char *str);
 void new_setenv(vars_t *vars);
