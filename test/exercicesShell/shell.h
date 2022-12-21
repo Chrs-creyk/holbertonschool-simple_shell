@@ -62,5 +62,7 @@ char *add_value(char *key, char *value);
 int _atoi(char *str);
 unsigned int check_match(char c, const char *str);
 char *new_strtok(char *str, const char *delim);
+static void sig_handler(int uuv);
+int main(int argc __attribute__((unused)), char **argv, char **environment);
 
 #endif
