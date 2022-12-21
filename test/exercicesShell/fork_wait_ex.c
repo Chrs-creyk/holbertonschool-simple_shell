@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int main()
+int fork_wait_ex(void)
 {
 	int i;
 	for (i = 0; i < 5; i++)
