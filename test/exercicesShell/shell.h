@@ -68,5 +68,6 @@ int _atoi(char *str);
 unsigned int check_match(char c, const char *str);
 char *new_strtok(char *str, const char *delim);
 int main(int argc __attribute__((unused)), char **argv, char **environment);
+char **_realloc(char **ptr, size_t *size);
 
 #endif
