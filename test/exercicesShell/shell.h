@@ -56,5 +56,9 @@ char *_uitoa(unsigned int count);
 char **tokenize(char *buffer, char *delimiter);
 char **make_env(char **env);
 void free_env(char **env);
+void add_key(vars_t *vars);
+char **find_key(char **env, char *key);
+char *add_value(char *key, char *value);
+int _atoi(char *str);
 
 #endif
