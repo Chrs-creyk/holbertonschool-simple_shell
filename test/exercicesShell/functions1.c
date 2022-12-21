@@ -4,7 +4,7 @@ void new_exit(vars_t *vars)
 {
 	int status;
 
-	if (_strcmpr(vars->av[0], "exit") == 0 && vars->av[1] != NULL)
+	if (_strcmp(vars->av[0], "exit") == 0 && vars->av[1] != NULL)
 	{
 		status = _atoi(vars->av[1]);
 		if (status == -1)
@@ -26,16 +26,16 @@ void new_exit(vars_t *vars)
 	exit(vars->status);
 }
 
-void _env(char **env)
+void _env(vars_t *vars)
 {
-	int i = 0;
+	unsigned int i;
 
-	while (env[i])
+	for (i = 0; vars->env[i]; i++)
 	{
-		write(1, env[i], _strlen(env[i]));
-		printf('\n');
-		i++;
+		_puts(vars->env[i]);
+		_puts("\n");
 	}
+	vars->status = 0;
 }
 
 void new_setenv(vars_t *vars)
