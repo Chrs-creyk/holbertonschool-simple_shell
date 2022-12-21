@@ -30,8 +30,6 @@ typedef struct builtins
 
 extern char **environ;
 
-char *_getenv(const char *name __attribute__((unused)));
-void freeArr(char *arr[]);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
@@ -39,10 +37,8 @@ char *_strdup(char *src);
 int command_line(void);
 int _execve(void);
 int fork_wait_ex(void);
-int _getline(void);
 int _getpid(void);
 int _wait(void);
-int _av(int ac, char **av);
 void new_exit(vars_t *vars);
 void _env(vars_t *vars);
 char *_strcat(char *dest, char *src);
