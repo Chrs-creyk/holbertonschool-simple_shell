@@ -6,7 +6,6 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 	builtins_t check[] = {
 		{"exit", new_exit},
 		{"env", _env},
-		{"getenv", _getenv},
 		{"setenv", new_setenv},
 		{"unsetenv", new_unsetenv},
 		{NULL, NULL}};
