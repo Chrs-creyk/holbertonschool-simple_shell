@@ -30,7 +30,7 @@ typedef struct builtins
 
 extern char **environ;
 
-char *_getenv(char *name);
+char *_getenv(const char *name __attribute__((unused)))
 void freeArr(char *arr[]);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
