@@ -60,5 +60,7 @@ void add_key(vars_t *vars);
 char **find_key(char **env, char *key);
 char *add_value(char *key, char *value);
 int _atoi(char *str);
+unsigned int check_match(char c, const char *str);
+char *new_strtok(char *str, const char *delim);
 
 #endif
