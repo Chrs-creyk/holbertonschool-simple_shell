@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int main(void)
+int _getline(void)
 {
 	char *buffer = malloc(1024);
 	size_t len = 1024;
