@@ -44,7 +44,7 @@ int _getpid(void);
 int _wait(void);
 int _av(int ac, char **av);
 void new_exit(vars_t *vars);
-void _env(char **env)
+void _env(vars_t *vars);
 char *_strcat(char *dest, char *src);
 ssize_t _puts(char *str);
 void new_setenv(vars_t *vars);
