@@ -100,7 +100,7 @@ void new_unsetenv(vars_t *vars)
 	for (i = 0; vars->env[i] != *key; i++)
 		newenv[i] = vars->env[i];
 	for (j = i + 1; vars->env[j] != NULL; j++, i++)
-		newenv[i] = vars->env[j];
+		
 	newenv[i] = NULL;
 	free(*key);
 	free(vars->env);
