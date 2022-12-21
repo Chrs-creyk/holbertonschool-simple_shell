@@ -10,7 +10,7 @@ int _av(int ac __attribute__((unused)), char **av)
 {
 	int i;
 
-	for (i = 1; av[i] != NULL; i++)
+	for (i = 0; av[i] != NULL; i++)
 	{
 		printf("%s\n", av[i]);
 	}
