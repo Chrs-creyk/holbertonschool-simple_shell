@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int main(void)
+int _execve(void)
 {
 	char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
 
