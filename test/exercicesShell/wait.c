@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int main(void)
+int _wait(void)
 {
 	pid_t child_pid;
 	int status;
