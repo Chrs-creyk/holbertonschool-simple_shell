@@ -26,7 +26,7 @@ void new_exit(vars_t *vars)
 	exit(vars->status);
 }
 
-void env(char **env)
+void _env(char **env)
 {
 	int i = 0;
 
