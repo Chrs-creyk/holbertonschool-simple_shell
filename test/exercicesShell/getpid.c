@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int main(void)
+int _getpid(void)
 {
 	pid_t my_pid;
 
