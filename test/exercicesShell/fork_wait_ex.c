@@ -15,6 +15,5 @@ int fork_wait_ex(void)
 			waitpid(child, NULL, 0);
 		}
 	}
-
 	return 0;
 }
