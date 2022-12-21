@@ -15,7 +15,7 @@ int command_line(void)
 		token = strtok(buffer, " ");
 		while (token)
 		{
-			printf("buffer strtok: %s\n", token)
+			printf("buffer strtok: %s\n", token);
 				token = strtok(NULL, " ");
 		}
 	}
