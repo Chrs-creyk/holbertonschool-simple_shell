@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * make_env - make the shell environment from the environment passed to main
  * @env: environment passed to main
