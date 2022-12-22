@@ -61,7 +61,7 @@ void new_setenv(vars_t *vars)
 			free(vars->buffer);
 			free(vars->commands);
 			free(vars->av);
-			free_env(vars->env);
+			
 			exit(127);
 		}
 		free(*key);
