@@ -43,7 +43,6 @@ void _puts2(char *str)
 		perror("Fatal Error");
 		exit(1);
 	}
-
 }
 
 /**
