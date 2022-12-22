@@ -10,7 +10,7 @@ char **make_env(char **env)
 {
 	char **newenv = NULL;
 	size_t i;
-	
+
 	for (i = 0; env[i] != NULL; i++)
 		;
 	newenv = malloc(sizeof(char *) * (i + 1));
