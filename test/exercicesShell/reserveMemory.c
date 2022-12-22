@@ -1,28 +1,23 @@
 #include "shell.h"
 
 /**
- * _realloc - reallocates a pointer to double the space
- * @ptr: pointer to the old array
- * @size: pointer to number of elements in the old array
- *
- * Return: pointer to the new array
+ * _calloc - allocates memory for an array, using malloc.
+ * @nmemb: Amount of elements of the array
+ * @size: Size of each element
+ * Return: pointer to the allocated memory, or NULL in fail
  */
 
-char **_realloc(char **ptr, size_t *size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char **new;
-	size_t i;
+	unsigned int i;
+	char *ret;
 
-	new = malloc(sizeof(char *) * ((*size) + 10));
-	if (new == NULL)
-	{
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	}
-	for (i = 0; i < (*size); i++)
-	{
-		new[i] = ptr[i];
-	}
-	*size += 10;
-	free(ptr);
-	return (new);
+	ret = malloc(nmemb * size);
+	if (ret == NULL)
+		return (NULL);
+	for (i = 0; i < (nmemb * size); i++)
+		ret[i] = 0x00;
+	return (ret);
 }
