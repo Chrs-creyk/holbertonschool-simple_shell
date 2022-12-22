@@ -35,7 +35,7 @@ int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 char *_strdup(char *src);
 int command_line(void);
-int _execve(**argv);
+int _execve(*argv);
 int fork_wait_ex(void);
 int _getpid(void);
 int _wait(void);
