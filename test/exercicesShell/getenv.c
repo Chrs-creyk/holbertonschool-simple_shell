@@ -46,6 +46,5 @@ void _cmd(char *cmd, char **argv)
         tkn = strtok(NULL, ":");
     }
     argv[0] = strdup(path);
-    _execve(argv);
     free(path);
 }
