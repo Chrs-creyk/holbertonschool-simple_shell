@@ -16,7 +16,6 @@ char **_realloc(char **ptr, size_t *size)
 	new = malloc(sizeof(char *) * ((*size) + 10));
 	if (new == NULL)
 	{
-		free(ptr);
 		return (NULL);
 	}
 	for (i = 0; i < (*size); i++)

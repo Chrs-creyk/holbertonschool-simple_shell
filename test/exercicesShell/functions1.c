@@ -12,7 +12,6 @@ void new_exit(vars_t *vars)
 			print_error(vars, ": Illegal number: ");
 			_puts2(vars->av[1]);
 			_puts2("\n");
-			free(vars->commands);
 			vars->commands = NULL;
 			return;
 		}

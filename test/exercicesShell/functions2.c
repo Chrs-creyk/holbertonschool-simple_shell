@@ -29,12 +29,11 @@ void add_key(vars_t *vars)
 		free(vars->buffer);
 		free(vars->commands);
 		free(vars->av);
-		free_env(vars->env);
 		free(newenv);
 		exit(127);
 	}
 	newenv[i + 1] = NULL;
-	free(vars->env);
+	free_env(vars->env);
 	vars->env = newenv;
 }
 

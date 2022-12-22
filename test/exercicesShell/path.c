@@ -131,7 +131,7 @@ void check_for_path(vars_t *vars)
 		{
 			path_dup = _strdup(path + 5);
 			path_tokens = tokenize(path_dup, ":");
-			for (i = 0; path_tokens && path_tokens[i]; i++, free(check))
+			for (i = 0; path_tokens && path_tokens[i]; i++)
 			{
 				check = _strcat(path_tokens[i], vars->av[0]);
 				if (stat(check, &buf) == 0)
