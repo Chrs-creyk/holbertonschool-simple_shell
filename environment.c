@@ -34,6 +34,7 @@ char **make_env(char **env)
 void free_env(char **env)
 {
 	unsigned int i;
+
 	for (i = 0; env[i] != NULL; i++)
 		free(env[i]);
 	free(env);
