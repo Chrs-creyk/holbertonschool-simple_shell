@@ -2,8 +2,10 @@
 
 void new_exit(vars_t *vars)
 {
+	char *r;
 	int status;
 
+	r = malloc(sizeof(vars) * vars_t);
 	if (_strcmp(vars->av[0], "exit") == 0 && vars->av[1] != NULL)
 	{
 		status = _atoi(vars->av[1]);
@@ -61,7 +63,7 @@ void new_setenv(vars_t *vars)
 			free(vars->buffer);
 			free(vars->commands);
 			free(vars->av);
-			
+			free_env(vars->env);
 			exit(127);
 		}
 		free(*key);
