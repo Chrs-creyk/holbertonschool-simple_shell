@@ -11,7 +11,7 @@ unsigned int sig_flag;
  */
 static void sig_handler(int uuv)
 {
-	(void) uuv;
+	(void)uuv;
 	if (sig_flag == 0)
 		_puts("\n($)> ");
 	else

@@ -14,8 +14,7 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 		{"env", _env},
 		{"setenv", new_setenv},
 		{"unsetenv", new_unsetenv},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 
 	for (i = 0; check[i].f != NULL; i++)
 	{

@@ -11,7 +11,6 @@
 #include <limits.h>
 #include <signal.h>
 
-
 /**
  * struct variables - variables
  * @av: command line arguments
