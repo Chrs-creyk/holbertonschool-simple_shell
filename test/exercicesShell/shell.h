@@ -67,6 +67,5 @@ char *new_strtok(char *str, const char *delim);
 int main(int argc __attribute__((unused)), char **argv, char **environment);
 char **_realloc(char **ptr, size_t *size);
 char *_getenv(char *name);
-void _cmd(char *cmd, char **argv);
 
 #endif

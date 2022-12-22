@@ -1,50 +1,32 @@
 #include "shell.h"
 
+/**
+ * _getenv - Extracts an env variable from environ
+ * @name: Variable name
+ * Return: Pointer to variable name, or NULL if variable hasn't be found
+ */
+
 char *_getenv(char *name)
 {
-    int i = 0;
-    char *val;
+	char *extractenv;
+	int difference, i, envlen;
 
-    unsigned long lenValue, lenName = strlen(name);
-
-    while (environ[i] != NULL)
-
-    {
-        lenValue = strlen(environ[i]);
-        val = malloc(lenValue * sizeof(char));
-        if (val == NULL)
-        {
-            perror("failed to allocate value");
-            return (NULL);
-        }
-        if (strncmp(name, environ[i], lenName) == 0 && strcpy(val, environ[i]))
-        {
-            return (val);
-        }
-        free(val);
-        i++;
-    }
-    free(val);
-    return (NULL);
-}
-
-void _cmd(char *cmd, char **argv)
-{
-    char *tkn = NULL, *cp_path = NULL, *path = cmd;
-    struct stat st;
-
-    cp_path = strdup(_getenv("PATH"));
-    tkn = strtok(cp_path, "=");
-    tkn = strtok(NULL, "\0");
-    tkn = strtok(tkn, ":");
-
-    while (tkn && stat(path, &st) != 0)
-    {
-        path = malloc(sizeof(char) * strlen(tkn) + strlen(cmd) + 1);
-        strcat(path, tkn), strcat(path, "/"), strcat(path, cmd);
-
-        tkn = strtok(NULL, ":");
-    }
-    argv[0] = strdup(path);
-    free(path);
+	for (i = 0; environ[i]; i++)
+	{
+		envlen = _strlen(environ[i]);
+		extractenv = malloc(sizeof(*extractenv) * (envlen + 1));
+		if (extractenv == NULL)
+			return (NULL);
+		extractenv = _strcpy(extractenv, environ[i]);
+		extractenv = strtok(extractenv, "=");
+		difference = _strcmp(name, extractenv);
+		if (difference == 0)
+		{
+			free(extractenv);
+			return (environ[i]);
+		}
+		else
+			free(extractenv);
+	}
+	return (NULL);
 }
