@@ -53,6 +53,7 @@ int main(int argc __attribute__((unused)), char **argv, char **environment)
 					check_for_path(&vars);
 			free(vars.av);
 		}
+		free(vars.buffer);
 		free(vars.commands);
 		sig_flag = 0;
 		if (is_pipe == 0)
