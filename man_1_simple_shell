@@ -1,0 +1,44 @@
+.TH SARAMAMBI_SHELL 1 "DECEMBER 23 2022" "Version 1.0" "SHELL General Comands Manual"
+
+.SH NAME
+.B Simple Shell
+- Command interpreter
+
+.SH SYNOPSIS
+.B [Command] [-OPTIONS] [FILE]
+
+
+.SH DESCRIPTION
+.B Simple Shell
+- Is an interpreter of commands for Linux. It is similar to the functionality of sh, together with its outputs and errors.
+.Nm ./hsh
+
+.PP
+In the interactive mode it will increment the line counter, if a command cannot be found or executed it will return the line counter, and the respective error message immediately and if it can be executed it will also increment a line counter that is only shown in cases of error.
+
+also works in non-interactive mode, this means that when the command is sent it will be executed and you will immediately exit our program
+
+.SH RETURN VALUE
+
+If everything was successful our return 0 program.
+
+.SH OPTIONS
+.B [^C]
+this is printed on the screen
+
+.B [^D]
+- this makes a clean exit from our progr
+
+.B [exit]
+- exits the shell
+
+.SH ENVIRONMENT
+It automatically searches you local PATH variable and sets it.
+
+
+.SH EXIT STATUS
+
+It conforms to the standard error codes of Linux, we talk about the POSIX.
+
+.SH EXAMPLES
+.B $ls
