@@ -32,7 +32,7 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
  *
  * Return: void
  */
-void new_exit(vars_t *vars
+void new_exit(vars_t *vars)
 {
 	int status;
 
