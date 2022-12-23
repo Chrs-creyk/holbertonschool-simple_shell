@@ -4,7 +4,7 @@
 unsigned int sig_flag;
 
 /**
- * sig_handler - handles ^C signal interupt
+ * sig_handler - handles ^C signal interupt (manual interrup signal with "ctrl + c")
  * @uuv: unused variable (required for signal function prototype)
  *
  * Return: void

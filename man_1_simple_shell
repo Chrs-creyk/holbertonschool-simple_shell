@@ -1,4 +1,4 @@
-.TH SARAMAMBI_SHELL 1 "DECEMBER 23 2022" "Version 1.0" "SHELL General Comands Manual"
+.TH SARAMAMBI_SHELL 1 "DECEMBER 23 2022" "Version 0.7" "SHELL General Comands Manual"
 
 .SH NAME
 .B Simple Shell
@@ -40,5 +40,3 @@ It automatically searches you local PATH variable and sets it.
 
 It conforms to the standard error codes of Linux, we talk about the POSIX.
 
-.SH EXAMPLES
-.B $ls
