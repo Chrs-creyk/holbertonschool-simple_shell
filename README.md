@@ -6,6 +6,6 @@
 
 
 
-The next flowchart is the one for the SHELL function
+The next flowchart is a flowchart in progress
 
-<img src=https://pbs.twimg.com/media/FkraJLsWIAEhVyd?format=jpg&name=medium>
+https://miro.com/app/board/uXjVP527ptI=/
